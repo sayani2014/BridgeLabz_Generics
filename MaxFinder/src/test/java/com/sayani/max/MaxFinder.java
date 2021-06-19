@@ -1,6 +1,7 @@
 /**
- * Given 3 Strings find the maximum
- * Ensure to test code with the Test Case
+ * Refactor all the 3 t One Generic Method and find the maximum
+ * Ensure the Generic Type extends Comparable
+ * Make the test case work
  *
  * @author: SAYANI KOLEY
  * @since: 19.06.2021
@@ -9,19 +10,22 @@
 package com.sayani.max;
 
 public class MaxFinder {
-    public static String findMax(String string1, String string2, String string3) {
-        String max = string1;
-        if(string2.compareToIgnoreCase(max) > 0)
-            max = string2;
-        if(string3.compareToIgnoreCase(max) > 0)
-            max = string3;
-        System.out.printf("Max value of %s %s %s is %s. \n", string1, string2, string3, max);
-
+    public static <T extends Comparable<T>> T findMax(T[] elements) {
+        T max = elements[0];
+        for (T i: elements) {
+            if(i.compareTo(max) > 0)
+                max = i;
+        }
         return max;
     }
 
     public static void main(String[] args) {
-        String string1 = "apple", string2 = "banana", string3 = "orange";
-        findMax(string1, string2, string3);
+        Integer[] integerValue = {10, 34, 27};
+        Float[]  floatValue = {16.75f, 2.3f, 8.76f};
+        String[] stringValue = {"apple", "banana", "orange"};
+
+        findMax(integerValue);
+        findMax(floatValue);
+        findMax(stringValue);
     }
 }
