@@ -1,9 +1,6 @@
 /**
- * Refactor to create Generic Class to take in 3 variables of Generic Type
- * Ensure the Generic Type extends Comparable
- * Write parameter constructor
- * Write testMaximum method to internally call the static testMaximum method passing the 3 instance variables
- * Define new test case to use the Generic Class
+ * Extend the max method to also print the max to std out using Generic Method
+ * Write printMax Generic Method which is internally called from testMaximum
  *
  * @author: SAYANI KOLEY
  * @since: 19.06.2021
