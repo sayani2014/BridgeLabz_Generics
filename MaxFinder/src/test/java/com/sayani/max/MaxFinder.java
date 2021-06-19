@@ -1,3 +1,11 @@
+/**
+ * Given 3 Integers find the maximum
+ * Ensure to test code with the Test Case
+ *
+ * @author: SAYANI KOLEY
+ * @since: 19.06.2021
+ */
+
 package com.sayani.max;
 
 public class MaxFinder {
