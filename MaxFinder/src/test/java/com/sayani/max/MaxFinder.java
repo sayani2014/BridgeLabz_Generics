@@ -1,5 +1,5 @@
 /**
- * Given 3 Floats find the maximum
+ * Given 3 Strings find the maximum
  * Ensure to test code with the Test Case
  *
  * @author: SAYANI KOLEY
@@ -9,19 +9,19 @@
 package com.sayani.max;
 
 public class MaxFinder {
-    public static Float findMax(Float float1, Float float2, Float float3) {
-        Float max = float1;
-        if(float2.compareTo(max) > 0)
-            max = float2;
-        if(float3.compareTo(max) > 0)
-            max = float3;
-        System.out.printf("Max value of %s %s %s is %s. \n", float1, float2, float3, max);
+    public static String findMax(String string1, String string2, String string3) {
+        String max = string1;
+        if(string2.compareToIgnoreCase(max) > 0)
+            max = string2;
+        if(string3.compareToIgnoreCase(max) > 0)
+            max = string3;
+        System.out.printf("Max value of %s %s %s is %s. \n", string1, string2, string3, max);
 
         return max;
     }
 
     public static void main(String[] args) {
-        Float float1 = 1.34f, float2 = 4.56f, float3 = 7.98f;
-        findMax(float1, float2, float3);
+        String string1 = "apple", string2 = "banana", string3 = "orange";
+        findMax(string1, string2, string3);
     }
 }
