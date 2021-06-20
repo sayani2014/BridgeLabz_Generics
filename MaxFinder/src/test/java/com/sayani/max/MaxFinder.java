@@ -11,46 +11,14 @@ package com.sayani.max;
 public class MaxFinder<T extends Comparable<T>> {
     T x, y, z;
 
-    public MaxFinder() {
-    }
-
-    public  MaxFinder(T[] elements) {
+    public  MaxFinder(T x, T y, T z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
-    public static Integer textMaximumInteger(Integer x, Integer y, Integer z) {
-        Integer max = x;
-        if(y.compareTo(max) > 0)
-            max = y;
-        if(z.compareTo(max) > 0)
-            max = z;
-
-        printMax(x, y, z, max);
-        return max;
-    }
-
-    public static Float textMaximumFloat(Float x, Float y, Float z) {
-        Float max = x;
-        if(y.compareTo(max) > 0)
-            max = y;
-        if(z.compareTo(max) > 0)
-            max = z;
-
-        printMax(x, y, z, max);
-        return max;
-    }
-
-    public static String textMaximumString(String x, String y, String z) {
-        String max = x;
-        if(y.compareToIgnoreCase(max) > 0)
-            max = y;
-        if(z.compareToIgnoreCase(max) > 0)
-            max = z;
-
-        printMax(x, y, z, max);
-        return max;
+    public T maximum() {
+        return MaxFinder.findMax(x, y, z);
     }
 
     public static <T> void printMax(T x, T y, T z, T max) {
@@ -73,12 +41,9 @@ public class MaxFinder<T extends Comparable<T>> {
         Float floatValue1 = 16.75f, floatValue2 = 2.3f, floatValue3 =  8.76f;
         String stringValue1 = "apple", stringValue2 = "banana", stringValue3 = "orange";
 
-        textMaximumString(stringValue1, stringValue2, stringValue3);
-        textMaximumFloat(floatValue1, floatValue2, floatValue3);
-        textMaximumInteger(integerValue1, integerValue2, integerValue3);
-
-        findMax(integerValue1, integerValue2, integerValue3);
-        findMax(stringValue1, stringValue2, stringValue3);
-        findMax(floatValue1, floatValue2, floatValue3);
+        new MaxFinder(integerValue1, integerValue2, integerValue3).maximum();
+        new MaxFinder(stringValue1, stringValue2, stringValue3).maximum();
+        new MaxFinder(floatValue1, floatValue2, floatValue3).maximum();
     }
 }
+
