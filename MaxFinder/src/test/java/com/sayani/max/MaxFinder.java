@@ -46,3 +46,4 @@ public class MaxFinder<T extends Comparable<T>> {
         new MaxFinder(floatValue1, floatValue2, floatValue3).maximum();
     }
 }
+
