@@ -1,6 +1,6 @@
 /**
- * Extend the max method to take more then three parameters
- * Use options and Sorting
+ * Extend the max method to also print the max to std out using Generic Method
+ * Write printMax Generic Method which is internally called from testMaximum
  *
  * @author: SAYANI KOLEY
  * @since: 19.06.2021
