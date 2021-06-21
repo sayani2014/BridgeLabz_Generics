@@ -24,6 +24,9 @@ Refractor 2: Refactor to create Generic Class to take in 3 variables of Generic 
     - Write testMaximum method to internally call the static testMaximum method passing the 3 instance variables
     - Define new test case to use the Generic Class
     
+4. Extend the max method to take more then three parameters 
+  - Use options and sorting   
+    
 5. Extend the max method to also print the max to std out using Generic Method 
   - Write printMax Generic Method which is internally called from testMaximum    
 
